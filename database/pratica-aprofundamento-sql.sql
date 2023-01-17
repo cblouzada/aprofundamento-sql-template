@@ -1,6 +1,8 @@
--- Conecte o arquivo pratica-aprofundamento-sql.db com a extensão MySQL e ative a conexão aqui
+-- Active: 1673958829014@@127.0.0.1@3306
+1-- Conecte o arquivo pratica-aprofundamento-sql.db com a extensão MySQL e ative a conexão aqui
 
 -- Deletar tabela
+
 DROP TABLE pokemons;
 
 -- Criar tabela
@@ -42,4 +44,41 @@ VALUES
 -- Buscar todos os pokemons
 SELECT * FROM pokemons;
 
+
 -- Práticas
+
+-- Buscar pokemons que tenham speed maior que 60
+
+SELECT * FROM pokemons
+WHERE type = 'fire';
+
+-- Buscar pokemons que tenham attack e special_attack maiores ou iguais a 60
+
+SELECT * FROM pokemons
+WHERE attack OR special_attack  >= 60;
+
+-- Buscar pokemons que tenham na coluna name o termo “saur” no final do texto
+
+SELECT AVG(hp) FROM pokemons; 
+
+SELECT COUNT() FROM pokemons; 
+
+SELECT AVG(hp) as mediaSimplesHp FROM pokemons; 
+
+SELECT COUNT() as totalDePkemons FROM pokemons;
+
+SELECT * FROM pokemons ORDER BY defense DESC; 
+
+SELECT COUNT(*) as pokemonAgrupadosPorTipo, type FROM pokemons GROUP BY type;
+
+
+
+
+
+
+
+
+
+
+
+
